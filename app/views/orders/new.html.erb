@@ -1,0 +1,23 @@
+<h1> New Order </h1>
+<%= form_for(@order) do |f| %>
+  <h3>Bread:</h3>
+  <%= f.radio_button :bread, :wheat %>
+  <%= f.label :bread, :wheat, value: :wheat %>
+  <%= f.radio_button :bread, :sourdough %>
+  <%= f.label :bread, :sourdough, value: :sourdough %>
+
+  <h3>Meat:</h3>
+  <%= f.radio_button :meat, :turkey %>
+  <%= f.label :meat, :turkey, value: :turkey %>
+  <%= f.radio_button :meat, :tofu %>
+  <%= f.label :meat, :tofu, value: :tofu %>
+
+  <h3>Cheese:</h3>
+  <%= f.radio_button :cheese, :muenster %>
+  <%= f.label :cheese, :muenster, value: :muenster %>
+  <%= f.radio_button :cheese, :cheddar %>
+  <%= f.label :cheese, :cheddar, value: :cheddar %>
+
+
+  <%= f.button "Order Now"%>
+<% end %>
