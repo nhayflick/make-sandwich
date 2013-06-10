@@ -11,6 +11,7 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(params[:order])
     if @order.save
+      OrderMailer.order_email(@order).deliver
       redirect_to @order
     else
       puts @order.errors.inspect

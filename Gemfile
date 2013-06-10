@@ -45,4 +45,6 @@ gem 'jquery-rails'
 
 #bootstrap
 
+gem 'figaro'
+
 gem 'twitter-bootstrap-rails'
