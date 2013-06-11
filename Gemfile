@@ -46,5 +46,7 @@ gem 'jquery-rails'
 #bootstrap
 
 gem 'figaro'
+gem 'devise'
 gem 'omniauth'
+gem 'omniauth-twitter'
 gem 'twitter-bootstrap-rails'
