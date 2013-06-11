@@ -3,4 +3,6 @@ class Condiment < ActiveRecord::Base
 
   has_many :order_condiments
   has_many :orders, through: :order_condiments
+
+  validates :name, presence: true
 end

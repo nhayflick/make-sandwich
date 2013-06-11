@@ -2,9 +2,11 @@
 <p>Bread: <b><%= @order.bread.capitalize %></b></p>
 <p>Meat: <b><%= @order.meat.capitalize %></b></p>
 <p>Cheese: <b><%= @order.cheese.capitalize %></b></p>
-<p>Condiments:
-<% @order.condiments.each do |condiment| %>
-  <li><b><%= condiment.name.capitalize %></b></li>
+<% unless @order.condiments.empty? %>
+  <p>Condiments:
+  <% @order.condiments.each do |condiment| %>
+    <li><b><%= condiment.name.capitalize %></b></li>
+  <% end %>
+  </ul>
+  </p>
 <% end %>
-</ul>
-</p>
