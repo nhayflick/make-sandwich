@@ -2,7 +2,7 @@ class CreateOrderCondiments < ActiveRecord::Migration
   def change
     create_table :order_condiments do |t|
       t.integer :order_id
-      t.string :condiment
+      t.integer :condiment_id
 
       t.timestamps
     end

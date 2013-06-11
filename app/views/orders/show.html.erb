@@ -1,9 +1,10 @@
 <h1>Your Order: </h1>
-<ul>
-
-<li>Bread: <%= @order.bread.capitalize %></li>
-<li>Meat: <%= @order.meat.capitalize %></li>
-<li>Cheese: <%= @order.cheese.capitalize %></li>
-
-
+<p>Bread: <b><%= @order.bread.capitalize %></b></p>
+<p>Meat: <b><%= @order.meat.capitalize %></b></p>
+<p>Cheese: <b><%= @order.cheese.capitalize %></b></p>
+<p>Condiments:
+<% @order.condiments.each do |condiment| %>
+  <li><b><%= condiment.name.capitalize %></b></li>
+<% end %>
 </ul>
+</p>

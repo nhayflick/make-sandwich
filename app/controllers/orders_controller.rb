@@ -1,11 +1,7 @@
 class OrdersController < ApplicationController
   def new
     @order = Order.new
-    # new.js
-    # respond_to do |format|
-    #   format.html { render :action => 'new' }
-    #   format.js { render :action => 'new' }
-    # end
+    # OrderCondiment.condiment_options.length.times {@order.order_condiments.build}
   end
 
   def create
