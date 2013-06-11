@@ -8,9 +8,11 @@ class OrdersController < ApplicationController
     @order = Order.new(params[:order])
     if @order.save
       OrderMailer.order_email(@order).deliver
-      redirect_to @order
+      redirect_to @order, :flash => { :success => "Yum! Your order has been submitted!" }
     else
-      puts @order.errors.inspect
+      puts @order.errors
+      # flash.now[:notices] ||= []
+      flash.now[:notices] = @order.errors.full_messages.to_sentence
       render :new
     end
   end
