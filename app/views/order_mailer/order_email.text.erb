@@ -3,7 +3,16 @@
 Someone wants a sandwich!
 
 Bread: <%= @order.bread.capitalize %>
-      Meat: <%= @order.meat.capitalize %>
-      Cheese: <%= @order.cheese.capitalize %>
-    
+Meat: <%= @order.meat.capitalize %>
+Cheese: <%= @order.cheese.capitalize %>
+<% unless @order.condiments.empty? %>
+  Condiments:
+    <% @order.condiments.each do |condiment| %>
+     <%= condiment.name.capitalize %>
+    <% end %>
+<% end %>
+  
+"<%= @quote.body%>"
+- <%= @quote.author %>
+
 Keep the great sammies coming!

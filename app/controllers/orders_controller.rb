@@ -7,7 +7,8 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(params[:order])
     if @order.save
-      OrderMailer.order_email(@order).deliver
+      @quote = Quote.offset(rand(Quote.count)).first
+      OrderMailer.order_email(@order, @quote).deliver
       redirect_to @order, :flash => { :success => "Yum! Your order has been submitted!" }
     else
       puts @order.errors

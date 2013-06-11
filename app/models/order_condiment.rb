@@ -5,6 +5,5 @@ class OrderCondiment < ActiveRecord::Base
   belongs_to :condiment
 
   validates :order, :condiment, presence: true
-  # validates :order_id, uniqueness: [scope: :condiment]
 
 end
