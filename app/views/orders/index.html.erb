@@ -1,8 +1,8 @@
 <h3> My Order History: </h3>
 
 <% @orders.each do |order| %>
-  <%= order.created_at.to_formatted_s(:long) %>: 
   <a href="/orders/<%= order.id %>">
-    <%= order.bread.capitalize %> bread, <%= order.meat.capitalize %>, <%= order.cheese.capitalize %>
-  </a>
+    <%= order.bread.capitalize %> bread, <%= order.meat.capitalize %>, <%= order.cheese.capitalize %>     </a>
+(<%= order.created_at.in_time_zone.to_formatted_s(:long) %>)
+    <br>
 <% end %>
