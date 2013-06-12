@@ -23,3 +23,11 @@ input[type="radio"], label{
  *zoom:1;
  padding-right: 20px;
 }
+
+.custom-nav {
+  border-radius: 0px;
+}
+
+.condos {
+  list-style-type: none;
+}

@@ -4,9 +4,11 @@
 <p>Cheese: <b><%= @order.cheese.capitalize %></b></p>
 <% unless @order.condiments.empty? %>
   <p>Condiments:
+  <ul class="condos">
   <% @order.condiments.each do |condiment| %>
     <li><b><%= condiment.name.capitalize %></b></li>
   <% end %>
   </ul>
   </p>
 <% end %>
+Submitted: <b><%= @order.created_at.in_time_zone.to_formatted_s(:long) %></b>
