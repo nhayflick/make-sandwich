@@ -6,7 +6,7 @@
   <body>
     <h1>New Sandwich Order!</h1>
     <p>
-      Someone wants a sandwich!<br/>
+      <%= @order.user ? @order.user.email : "Someone"%> wants a sandwich!<br/>
     </p>
       <p>Bread: <b><%= @order.bread.capitalize %></b></p>
       <p>Meat: <b><%= @order.meat.capitalize %></b></p>

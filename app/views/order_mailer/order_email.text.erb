@@ -1,6 +1,6 @@
   New Sandwich Order!
  
-Someone wants a sandwich!
+<%= @order.user ? @order.user.email : "Someone"%> wants a sandwich!
 
 Bread: <%= @order.bread.capitalize %>
 Meat: <%= @order.meat.capitalize %>
