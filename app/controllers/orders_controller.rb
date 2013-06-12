@@ -20,4 +20,8 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
   end
+
+  def index
+    @orders = current_user.orders
+  end
 end
