@@ -31,3 +31,14 @@ input[type="radio"], label{
 .condos {
   list-style-type: none;
 }
+
+.order-section {
+  display: inline;
+  float: left;
+  margin: 10px;
+}
+
+.condiment-section {
+  display: inline-block;
+  margin: 10px;
+}
