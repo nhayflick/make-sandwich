@@ -4,6 +4,6 @@ class OrderMailer < ActionMailer::Base
     def order_email(order, quote)
       @order = order
       @quote = quote
-      mail(:to => "nhayflick@gmail.com", :subject => "Order #"+order.id.to_s)
+      mail(:to => "make_sandwich@generalthings.com", :subject => "Order #"+order.id.to_s)
     end
 end
